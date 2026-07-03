@@ -1,0 +1,6 @@
+{
+  "name": "HackerAcademy",
+  "description": "An interactive, hands-on cybersecurity learning platform that teaches security and hacking from zero to pro. Features a live simulated terminal, interactive hacking labs (SQLi, XSS, Buffer Overflow, Cryptography), modular lessons, quizzes, achievements, and an AI Hacking Mentor.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

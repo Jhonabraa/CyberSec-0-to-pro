@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+/* 3D Cyberpunk Grid background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.cyber-grid-dense {
+  background-image: 
+    linear-gradient(rgba(16, 185, 129, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.07) 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* Isometric projection style cards */
+.isometric-3d-card {
+  transform: perspective(1200px) rotateX(6deg) rotateY(-8deg) rotateZ(1deg);
+  box-shadow: -12px 16px 0px 0px rgba(16, 185, 129, 0.15);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+}
+
+.isometric-3d-card:hover {
+  transform: perspective(1200px) rotateX(2deg) rotateY(-3deg) rotateZ(0deg) translateY(-2px);
+  box-shadow: -6px 8px 0px 0px rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.isometric-3d-card-rose {
+  transform: perspective(1200px) rotateX(6deg) rotateY(-8deg) rotateZ(1deg);
+  box-shadow: -12px 16px 0px 0px rgba(244, 63, 94, 0.15);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+}
+
+.isometric-3d-card-rose:hover {
+  transform: perspective(1200px) rotateX(2deg) rotateY(-3deg) rotateZ(0deg) translateY(-2px);
+  box-shadow: -6px 8px 0px 0px rgba(244, 63, 94, 0.25);
+  border-color: rgba(244, 63, 94, 0.4);
+}
+
+.isometric-3d-card-purple {
+  transform: perspective(1200px) rotateX(6deg) rotateY(-8deg) rotateZ(1deg);
+  box-shadow: -12px 16px 0px 0px rgba(168, 85, 247, 0.15);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+}
+
+.isometric-3d-card-purple:hover {
+  transform: perspective(1200px) rotateX(2deg) rotateY(-3deg) rotateZ(0deg) translateY(-2px);
+  box-shadow: -6px 8px 0px 0px rgba(168, 85, 247, 0.25);
+  border-color: rgba(168, 85, 247, 0.4);
+}
+
+/* 3D Interactive Buttons */
+.btn-3d-emerald {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 0 #059669;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-emerald:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0 0 #059669;
+}
+
+.btn-3d-cyan {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 0 #0891b2;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-cyan:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0 0 #0891b2;
+}
+
+.btn-3d-purple {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 0 #7c3aed;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-purple:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0 0 #7c3aed;
+}
+
+.btn-3d-rose {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 0 #e11d48;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-rose:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0 0 #e11d48;
+}
+
+.btn-3d-slate {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 0 #334155;
+  transition: all 0.1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-3d-slate:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0 0 #334155;
+}
+
+/* Custom keyframes for retro scanning overlay and fade-in effects */
+@keyframes cyberScan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.scanline-effect::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 3px, 6px 100%;
+  pointer-events: none;
+}
+
